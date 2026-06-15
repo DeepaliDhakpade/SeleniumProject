@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<suite parallel="false" name="Regression Suite">
+  <test name="Smoke Tests">
+    <classes>
+      <class name="com.deep.tests.FirstTest"/>
+    </classes>
+  </test>  
+</suite> Suite -->
+
+<suite name="Regression Suite"> <!--parallel="methods" thread-count="3"-->
+
+    <!-- Register Listener -->
+    <listeners>
+        <listener class-name="com.deep.utils.TestListener"/>
+    </listeners>
+
+    <test name="Login Tests">
+    	<groups>
+        <run>
+            <exclude name="headless-skip"/>
+        </run>
+    </groups>
+        <classes>
+            <class name="com.deep.tests.LoginTest"/>
+            <class name="com.deep.tests.ExtentReportTest"/>
+            <class name="com.deep.tests.DataDrivenTest"/>
+            <class name="com.deep.tests.WebelementTest"/>
+        </classes>
+    </test>
+
+</suite>
