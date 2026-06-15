@@ -41,18 +41,12 @@ public class DriverFactory {
     public static WebDriver getDriver() {
         if (driver.get() == null) {
         	
-        	// Jenkins runs headless — no display for Chrome browser-  Run Chrome in Headless mode
         	ChromeOptions options = new ChromeOptions();
 
-            // Run without opening browser window
-        	 // Headless settings
-           // options.addArguments("--headless");	// Local machine Jenkins → No need for headless!
+            // options.addArguments("--headless");	// Local machine Jenkins → No need for headless!
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--window-size=1920,1080");
-          // till here code added for headless
-            
+                                  
          // ── ADD THESE NEW LINES ──
             // Bypass bot detection
             options.addArguments("--disable-blink-features=AutomationControlled");

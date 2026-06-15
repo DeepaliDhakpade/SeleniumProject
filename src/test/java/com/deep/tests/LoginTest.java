@@ -41,8 +41,7 @@ public class LoginTest {
 	    wait.until(ExpectedConditions.urlContains("secure"));
 
 	    Assert.assertTrue(
-	        driver.getCurrentUrl().contains("secure"),
-	        "Should reach secure area!");
+	        driver.getCurrentUrl().contains("secure"));
 	    System.out.println("Valid login passed ✅");
 	}
 	
